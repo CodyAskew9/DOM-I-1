@@ -33,9 +33,9 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
     "copyright": "Copyright Great Idea! 2021",
   },
   "images": {
-    "logo-img": "http://localhost:9000/img/logo.png",
-    "cta-img": "http://localhost:9000/img/cta.png",
-    "accent-img": "http://localhost:9000/img/accent.png",
+    "logo-img": "mocks/img/logo.png",
+    "cta-img": "mocks/img/cta.png",
+    "accent-img": "mocks/img/accent.png",
   },
 };
 
@@ -44,7 +44,7 @@ console.log('project wired!')
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["images"]["logo-img"]);
 
-//Updating nav section
+//nav
 const navSect = document.querySelectorAll('nav a')
 navSect[0].textContent = siteContent['nav']['nav-item-1'];
 navSect[1].textContent = siteContent['nav']['nav-item-2'];
@@ -70,27 +70,35 @@ navStyle.forEach(italic => {
 
 
 
-//Updating cta section
+//cta section
 const h1Sect = document.querySelector('h1');
 h1Sect.textContent = siteContent['cta']['h1'];
 const button = document.querySelector('button');
 button.textContent = siteContent['cta']['button'];
 const ctaImg = document.querySelector('#cta-img');
 ctaImg.setAttribute('src',siteContent['images']['cta-img']);
-//Updating main-content
+
+
+//main-content
 const features = document.querySelector('.top-content .text-content:nth-of-type(1) h4');
 const featuresContent = document.querySelector('.top-content .text-content:nth-of-type(1) p');
 const about = document.querySelector('.top-content .text-content:nth-of-type(2) h4');
 const aboutContent = document.querySelector('.top-content .text-content:nth-of-type(2) p');
-//main content text
+
+
+//main-content text
 features.textContent = siteContent['main-content']['features-h4'];
 featuresContent.textContent= siteContent['main-content']['features-content'];
 about.textContent = siteContent['main-content']['about-h4'];
 aboutContent.textContent = siteContent['main-content']['about-content'];
-//main content images
+
+
+//main-content images
 const midImg = document.querySelector('#middle-img');
 midImg.setAttribute('src',siteContent['images']['accent-img']);
-//Updating bottom content
+
+
+//bottom content
 const services = document.querySelector('.bottom-content .text-content:nth-of-type(1) h4');
 const servicesContent = document.querySelector('.bottom-content .text-content:nth-of-type(1) p')
 services.textContent = siteContent['main-content']['services-h4']
